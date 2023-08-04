@@ -2,9 +2,9 @@
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# callstackとは
 
-Let's discover **Docusaurus in less than 5 minutes**.
+callstackとは、pnpm workspace + turborepoで構成されたモノレポのボイラープレートです。
 
 ## Getting Started
 
