@@ -58,7 +58,7 @@ jobs:
   deploy:
     permissions:
       contents: read
-      pages: read
+      pages: write
       id-token: write
     environment:
       name: github-pages
