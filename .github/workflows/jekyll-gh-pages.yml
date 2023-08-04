@@ -42,12 +42,6 @@ jobs:
         run: |
           pnpm run build
 
-      # node_modulesと.pnpm-storeを削除
-      - name: Remove node_modules and .pnpm-store
-        run: |
-          rm -rf node_modules
-          rm -rf .pnpm-store
-
       - name: Upload artifact
         uses: actions/upload-artifact@v2
         with:
@@ -57,9 +51,8 @@ jobs:
   # Deployment job
   deploy:
     permissions:
-      contents: read
-      pages: write
-      id-token: write
+      pages: write      # to deploy to Pages
+      id-token: write 
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
